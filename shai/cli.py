@@ -1,9 +1,24 @@
+
 import argparse
 import asyncio
 
-from console import print_terminal_command, Console
-from generate import generate
+from shai.console import print_terminal_command, Console
+from shai.generate import generate
 
+
+parser = argparse.ArgumentParser(
+    description="Welcome to Shai [sh + ai] - Shell Ai buddy 🤖\n\n"
+                "Shai is your trusty command-line companion. Just simply express what you want your terminal to do, \n"
+                "and Shai will help you with it. ",
+    formatter_class=argparse.RawTextHelpFormatter,
+    epilog="Examples:\n"
+           "  shai 'freez pip libs to requirenments.txt' # How to make requirenments.\n"
+           "    pip freeze > requirements.txt \n"
+           "  shai rename git branch \n"
+           "    git branch -m <new-name> \n"
+)
+
+parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
 
 async def search(prompt):
     """Search for a query text."""
@@ -15,10 +30,11 @@ async def search(prompt):
         except Exception as e:
            console.log(e) 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='shell\'s AI buddy')
-    parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
 
+def main():
     args = parser.parse_args()
     query_text = ' '.join(args.question)
-    asyncio.run(search(query_text))
+    asyncio.run(search(query_text))  
+
+if __name__ == '__main__':
+    main()

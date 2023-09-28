@@ -7,7 +7,7 @@ from cohere import AsyncClient
 
 async def generate(prompt: str, api_key: str = os.environ.get("SHAI_COHERE_KEY")) -> str:
     if api_key is None:
-        raise ValueError('SHAI_COHERE_KEY is not set')
+        raise ValueError('env varialbe "SHAI_COHERE_KEY" is not set')
     
     async with AsyncClient(api_key) as co:  
         response = await co.generate(  

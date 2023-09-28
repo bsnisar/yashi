@@ -10,7 +10,7 @@ setup(
     packages=find_packages(exclude=['tests']), 
     entry_points={
         'console_scripts': [
-            'shai=shai.cli',
+            'shai=shai.cli:main',
         ],
     },
     install_requires=[
