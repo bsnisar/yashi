@@ -1,13 +1,19 @@
-
+import asyncio
 
 from rich import print, pretty
-from rich.console import Console
+from rich.console import Console 
 from rich.text import Text
 from rich.syntax import Syntax
+from rich.spinner import Spinner
+
+from asyncio import Task, Event
 
 
-def print_nice_text(terminal_command: str):
+def print_terminal_command(terminal_command: str):
+
     console = Console()
+    console.print()
+    console.print()
 
     suggestion = Text("SUGGESTION", "bold")
     console.print(suggestion)
@@ -18,9 +24,4 @@ def print_nice_text(terminal_command: str):
         #theme="colorful",
     )
 
-    # Convert the Syntax object to a plain Text object
-    text_object = Text()
-    text_object.append("\n\t".join(code_block.lines))
-    # Optionally, you can add further styling to the Text object
-    text_object.stylize("italic", 0, len(text_object.plain))
-    console.print(text_object)
+    console.print(code_block)

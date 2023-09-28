@@ -3,24 +3,22 @@ import asyncio
 
 import sys
 
-from prompt import Prompter
-from console import print_nice_text
+from generate import generate
+from console import print_terminal_command, Console
 
 
 async def search(prompt):
     """Search for a query text."""
-    # Perform a search using the query text
-    print(f"Searching with query: {prompt}")
-
-    prompter = Prompter('Jo6FfUghiiiG9i0xDAfuLCR8JIindK4t2HysPpfr')
-
-    command = await prompter.generate(prompt)
-    print_nice_text(command)
-
-
+    console = Console()
+    with console.status(f"thinking on how to '{prompt}'", spinner="monkey") as status:
+        try:
+            command = await generate(prompt)   
+            print_terminal_command(command)
+        except Exception as e:
+           console.log(e) 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='AI helper to a shell')
+    parser = argparse.ArgumentParser(description='shell\'s AI buddy')
     parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
 
     args = parser.parse_args()
