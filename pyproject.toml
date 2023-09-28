@@ -1,0 +1,20 @@
+
+[tool.poetry]
+name = "shai"
+version = "0.0.1"
+description = "Just ask what shell should do for you"
+authors = ["Bohdan Snisar <bogdan.sns@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/bsnisar/shai"
+
+[tool.poetry.dependencies]
+python = " >=3.7,<4.0"
+rich = "^11.0"
+cohere = "^4.27"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+shai = "shai.cli:main"
