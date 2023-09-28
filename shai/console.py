@@ -10,7 +10,6 @@ from asyncio import Task, Event
 
 
 def print_terminal_command(terminal_command: str):
-
     console = Console()
     console.print()
     console.print()
@@ -21,7 +20,6 @@ def print_terminal_command(terminal_command: str):
     code_block = Syntax(
         terminal_command, 
         "shell", 
-        #theme="colorful",
     )
 
     console.print(code_block)
