@@ -6,8 +6,6 @@ from rich.text import Text
 from rich.syntax import Syntax
 from rich.spinner import Spinner
 
-from asyncio import Task, Event
-
 
 def print_terminal_command(terminal_command: str):
     console = Console()
