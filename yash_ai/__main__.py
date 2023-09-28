@@ -2,8 +2,8 @@
 import argparse
 import asyncio
 
-from shai.console import print_terminal_command, Console
-from shai.generate import generate
+from yash_ai.console import print_terminal_command, Console
+from yash_ai.generate import generate
 
 
 parser = argparse.ArgumentParser(
@@ -17,7 +17,6 @@ parser = argparse.ArgumentParser(
            "  shai rename git branch \n"
            "    git branch -m <new-name> \n"
 )
-
 parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
 
 async def search(prompt):
