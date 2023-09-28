@@ -1,13 +1,28 @@
-import click
+import argparse
+import asyncio
 
-@click.command()
-@click.option('--number', '-n', type=float, prompt='Enter a number', help='The number to calculate square and cube for')
-def calculate(number):
-    """Calculate the square and cube of a number."""
-    square = number ** 2
-    cube = number ** 3
-    click.echo(f"Square of {number}: {square}")
-    click.echo(f"Cube of {number}: {cube}")
+import sys
+
+from prompt import Prompter
+from console import print_nice_text
+
+
+async def search(prompt):
+    """Search for a query text."""
+    # Perform a search using the query text
+    print(f"Searching with query: {prompt}")
+
+    prompter = Prompter('Jo6FfUghiiiG9i0xDAfuLCR8JIindK4t2HysPpfr')
+
+    command = await prompter.generate(prompt)
+    print_nice_text(command)
+
+
 
 if __name__ == '__main__':
-    calculate()
+    parser = argparse.ArgumentParser(description='AI helper to a shell')
+    parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
+
+    args = parser.parse_args()
+    query_text = ' '.join(args.question)
+    asyncio.run(search(query_text))
