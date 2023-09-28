@@ -28,7 +28,6 @@ def _generate_prompt(prompt: str) -> str:
         Reply with the single line command:
     '''.format(prompt)
     res = textwrap.dedent(task)
-    print(res)
     return res
 
 

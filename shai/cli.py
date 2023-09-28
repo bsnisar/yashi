@@ -1,10 +1,8 @@
 import argparse
 import asyncio
 
-import sys
-
-from generate import generate
 from console import print_terminal_command, Console
+from generate import generate
 
 
 async def search(prompt):
