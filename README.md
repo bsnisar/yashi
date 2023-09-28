@@ -4,11 +4,14 @@
 Are you a person who had trouble remembering shell commands and flags for all shell commands? This is yet another helper that 
 can make the shell more human-friendly. Just say what to do, not remember. 
 
+## Usage
+
+Set env variable `SHAI_COHERE_KEY`
+
 ## Build 
 
-Create a standalone executable binary by running:
+Just run make. Distributive will be assembled and placed into ./dist folder
 ```
-pyinstaller --onefile my_cli_app
+make
 ```
 
-This command will create a dist directory containing the standalone binary. You can distribute this binary to others, and they can run your CLI app without needing to install Python or any dependencies.
