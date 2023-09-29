@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "yash-ai"
-version = "0.0.4a0"
+version = "0.0.5a0"
 description = "Just ask what shell should do for you"
 authors = ["Bohdan Snisar <bogdan.sns@gmail.com>"]
 license = "MIT"
