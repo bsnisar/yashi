@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/bsnisar/yashi/main/assets/logo.png" width="128">
 
-## Yash: Yet Another Shell Ai Command-Line Companion
+## Yashi: Yet Another SHell aI Command-Line Companion
 
 [![PyPI version](https://badge.fury.io/py/yash-ai.svg)](https://pypi.org/project/yash-ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
