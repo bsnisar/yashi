@@ -1,4 +1,9 @@
-<img src="https://raw.githubusercontent.com/bsnisar/yashi/main/assets/logo.png" width="128">
+```shell
+$ yashi
+  /\_/\
+ ( o.o )
+ /  |  \
+```
 
 ## Yashi: Yet Another SHell aI Command-Line Companion
 

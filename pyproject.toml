@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "yash-ai"
-version = "0.0.3a0"
+version = "0.0.4a0"
 description = "Just ask what shell should do for you"
 authors = ["Bohdan Snisar <bogdan.sns@gmail.com>"]
 license = "MIT"
@@ -19,6 +19,7 @@ keywords = ["ai", "cohere", "shell"]
 python = ">=3.7.2,<4.0"
 rich = "^11.0"
 cohere = "^4.27"
+rich-argparse = "^1.3.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.17.6"
