@@ -11,9 +11,10 @@ def print_terminal_command(terminal_command: str):
     console = Console()
     console.print()
     console.print()
-
     suggestion = Text("Suggestions", "bold")
-    console.print(suggestion)
 
-    code_block = Syntax(terminal_command, "shell", )
+    console.print(suggestion)
+    console.print()
+    
+    code_block = Syntax(terminal_command, "shell")
     console.print(code_block)
