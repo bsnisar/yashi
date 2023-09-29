@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "yash-ai"
-version = "0.0.2a0"
+version = "0.0.3a0"
 description = "Just ask what shell should do for you"
 authors = ["Bohdan Snisar <bogdan.sns@gmail.com>"]
 license = "MIT"
@@ -25,4 +25,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-shai = "yash_ai.__main__:main"
+yashi = "yash_ai.__main__:main"

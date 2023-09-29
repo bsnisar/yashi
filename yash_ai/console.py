@@ -12,12 +12,8 @@ def print_terminal_command(terminal_command: str):
     console.print()
     console.print()
 
-    suggestion = Text("SUGGESTION", "bold")
+    suggestion = Text("Suggestions", "bold")
     console.print(suggestion)
 
-    code_block = Syntax(
-        terminal_command, 
-        "shell", 
-    )
-
+    code_block = Syntax(terminal_command, "shell", )
     console.print(code_block)
