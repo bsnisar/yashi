@@ -1,3 +1,7 @@
+# pylint: disable=missing-function-docstring
+# pylint: disable=broad-exception-caught
+# pylint: disable=anomalous-backslash-in-string
+
 
 import argparse
 import asyncio
@@ -21,23 +25,25 @@ parser = argparse.ArgumentParser(
            "~$  yashi rename git branch \n"
            "    git branch -m <new-name> \n"
 )
-parser.add_argument('question', metavar='question', type=str, nargs='+', help='The question to my shell')
+parser.add_argument('question', metavar='question', type=str, nargs='+',
+                    help='The question to my shell')
 
 async def search(prompt):
     """Search for a query text."""
     console = Console()
-    with console.status(f"thinking on how to '{prompt}'", spinner="dots") as status:
+    with console.status(f"thinking on how to '{prompt}'", spinner="dots"):
         try:
-            command = await generate(prompt)   
+            command = await generate(prompt)
             print_terminal_command(command)
-        except Exception as e:
-           console.log(e) 
+        except Exception as ex:
+            console.log(ex)
 
 
 def main():
     args = parser.parse_args()
     query_text = ' '.join(args.question)
-    asyncio.run(search(query_text))  
+    asyncio.run(search(query_text))
 
 if __name__ == '__main__':
     main()
+    
