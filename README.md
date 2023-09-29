@@ -13,6 +13,9 @@ $ yashi
 Are you a person who had trouble remembering shell commands and flags for all shell commands? This is yet another helper that 
 can make the shell more human-friendly. Just say what to do, not remember. Simply input what you want to do in natural language, and `yashi` will suggest single-line commands that achieve your intent.
 
+
+![](https://raw.githubusercontent.com/bsnisar/yashi/main/assets/ezgif.example.gif)
+
 ## Usage
 You can install Shell-AI directly from PyPI using pip:
 ```
